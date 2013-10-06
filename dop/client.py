@@ -205,7 +205,7 @@ class Client(object):
         if virtio:
             params['virtio'] = 1
         if private_networking:
-            params['private_networking']= 'true'
+            params['private_networking']= 1
         
         json = self.request('/droplets/new', method='GET', params=params)
         droplet_json = json.get('droplet', None)
